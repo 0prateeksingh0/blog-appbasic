@@ -27,6 +27,12 @@ mongoose.connect('mongodb://127.0.0.1:27017/blog-app')
 // Routes
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/blogs', require('./routes/blog'));
+app.get('/', (req, res) => {
+  res.send({
+    activeStatus:true,
+    error:false,
+  })
+})
 
 // Error handling middleware
 app.use((err, req, res, next) => {
