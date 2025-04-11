@@ -10,7 +10,7 @@ const PORT = process.env.PORT || 5000;
 require('dotenv').config();
 
 app.use(cors({
-    origin: 'http://localhost:5173', // Your frontend URL
+    origin: ['http://localhost:5173', 'https://blog-apptask.netlify.app'], // Your frontend URL
     credentials: true
   }));
 
